@@ -1,0 +1,45 @@
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0%;
+}
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0%;
+  background-color: orangered;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../public/images/20180623_074452.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* .modal {
+  height: 100%;
+  width: 100%;
+  margin: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fade {
+  height: 100%;
+  width: 100%;
+  margin: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show {
+  height: 100%;
+  width: 100%;
+  margin: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
