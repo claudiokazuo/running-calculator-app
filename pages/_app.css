@@ -7,16 +7,21 @@ body {
   height: 100%;
   width: 100%;
   margin: 0%;
-  background-color: orangered;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../public/images/20180623_074452.jpg");
+  background-image: url("../public/images/sunset.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+button {
+  margin: 10px;
+  width: 100px;
+  height: 40px;
+}
 /* .modal {
   height: 100%;
   width: 100%;

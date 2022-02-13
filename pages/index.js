@@ -1,4 +1,4 @@
-import Main from "../src/screens/Main";
-export default function Index() {
-  return <Main />;
+import Home from "../src/screens/Home";
+export default function IndexPage() {
+  return <Home />;
 }
