@@ -1,18 +1,13 @@
+import Head from "next/head";
 import Modal from "../../components/Modal";
 import { CalculateDistance } from "../../api/mock";
-import {  
-  Card,
-  CardBody,
-  CardTitle,
-  Container,
-  Form,  
-  Row,
-} from "reactstrap";
+import { Container } from "reactstrap";
 import { useState } from "react";
 import inputHandler from "../../utils/InputHandler";
 import Time from "../../components/Time";
 import Pace from "../../components/Pace";
 import Calc from "../../components/Calc";
+import Box from "../../components/Box";
 
 export default function Main() {
   const [modal, setModal] = useState({ open: false, header: "", message: "" });
@@ -38,7 +33,7 @@ export default function Main() {
 
     for (let i = 0; i < e.target.length; i++) {
       console.log("class");
-      if (e.target[i].type === "number") {
+      if (e.target[i].type === "text") {
         if (!inputHandler[e.target[i].name](e.target[i].value)) {
           setModal({
             open: true,
@@ -62,7 +57,7 @@ export default function Main() {
       setModal({
         open: true,
         header: "Distância",
-        message: `${distance} km`,
+        message: `${distance.toString().replace(".", ",")} km`,
         validated: true,
       });
     }
@@ -70,6 +65,7 @@ export default function Main() {
 
   return (
     <>
+      <Head><title>Distância</title></Head>
       <Container>
         <Modal
           open={modal.open}
@@ -77,21 +73,11 @@ export default function Main() {
           header={modal.header}
           message={modal.message}
         />
-        <Card>
-          <CardBody>
-            <Row style={{ textAlign: "center" }}>
-              <CardTitle tag="h3" style={{ fontStyle: "italic" }}>
-                Distância Estimada
-              </CardTitle>
-            </Row>
-
-            <Form onSubmit={handleSubmit} style={{ margin: "15px" }}>
-              <Time handleInput={handleInput} />
-              <Pace handleInput={handleInput} />
-              <Calc />
-            </Form>
-          </CardBody>
-        </Card>
+        <Box handleSubmit={handleSubmit} title="Distância">
+          <Time handleInput={handleInput} />
+          <Pace handleInput={handleInput} />
+          <Calc />
+        </Box>
       </Container>
     </>
   );

@@ -1,19 +1,14 @@
+import Head from "next/head";
 import Modal from "../../components/Modal";
 import { CalculateTime } from "../../api/mock";
-import {  
-  Card,
-  CardBody,
-  CardTitle,
-  Container,
-  Form,  
-  Row,
-} from "reactstrap";
+import { Container } from "reactstrap";
 import { useState } from "react";
 import inputHandler from "../../utils/InputHandler";
 import zeroPadHandler from "../../utils/ZeroPadHandler";
 import Pace from "../../components/Pace";
 import Calc from "../../components/Calc";
 import Distance from "../../components/Distance";
+import Box from "../../components/Box";
 
 export default function Main() {
   const [modal, setModal] = useState({ open: false, header: "", message: "" });
@@ -38,7 +33,7 @@ export default function Main() {
     let validated = true;
 
     for (let i = 0; i < e.target.length; i++) {
-      if (e.target[i].type === "number") {
+      if (e.target[i].type === "text") {
         if (!inputHandler[e.target[i].name](e.target[i].value)) {
           setModal({
             open: true,
@@ -48,7 +43,13 @@ export default function Main() {
           validated = false;
           break;
         } else {
-          data = { ...data, [e.target[i].name]: parseInt(e.target[i].value) };
+          data = {
+            ...data,
+            [e.target[i].name]:
+              e.target[i].name === "distance"
+                ? parseFloat(e.target[i].value.replace(",", "."))
+                : parseInt(e.target[i].value),
+          };
         }
       }
     }
@@ -69,6 +70,9 @@ export default function Main() {
 
   return (
     <>
+      <Head>
+        <title>Tempo</title>
+      </Head>
       <Container>
         <Modal
           open={modal.open}
@@ -76,21 +80,11 @@ export default function Main() {
           header={modal.header}
           message={modal.message}
         />
-        <Card>
-          <CardBody>
-            <Row style={{ textAlign: "center" }}>
-              <CardTitle tag="h3" style={{ fontStyle: "italic" }}>
-                Tempo Total Estimado
-              </CardTitle>
-            </Row>
-
-            <Form onSubmit={handleSubmit} style={{ margin: "15px" }}>
-              <Distance handleInput={handleInput} />
-              <Pace handleInput={handleInput} />
-              <Calc />
-            </Form>
-          </CardBody>
-        </Card>
+        <Box title="Tempo" handleSubmit={handleSubmit}>
+          <Distance handleInput={handleInput} />
+          <Pace handleInput={handleInput} />
+          <Calc />
+        </Box>
       </Container>
     </>
   );

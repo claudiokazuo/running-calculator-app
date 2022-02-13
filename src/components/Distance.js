@@ -1,14 +1,15 @@
+import NumberFormat from "react-number-format";
 import { FormGroup, Input, InputGroup, Label, Col } from "reactstrap";
-export default function Distance({handleInput}) {
+export default function Distance({ handleInput }) {
+  
   return (
     <>
-      {" "}
       <FormGroup
         style={{
           textAlign: "center",
         }}
       >
-        <Label tag="strong">Distância</Label>
+        <Label tag="h4" style={{color:"#85C7F2",fontWeight: "bold", textShadow: "2px 2px #028090"}}>Distância</Label>
         <InputGroup
           style={{
             margin: "5px",
@@ -17,14 +18,19 @@ export default function Distance({handleInput}) {
             alignItems: "center",
           }}
         >
-          <Col sm={3}>
-            <Input
-              name="distance"
-              type="number"
-              placeholder="km"
-              onChange={handleInput}
-              min={1}
+          <Col sm={3}>          
+            <NumberFormat 
+            name="distance"
+            onChange={handleInput}
+            className="form-control input-number"
+            placeholder="km"             
+            decimalSeparator=","
+            type="text"            
+            displayType="input"
+            suffix=" km"           
+            mask="##,###"         
             />
+            
           </Col>
         </InputGroup>
       </FormGroup>

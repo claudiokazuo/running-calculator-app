@@ -14,8 +14,8 @@ const handleTime = (value) => {
   return true;
 };
 
-const handleNumber = (value) => {
-  const target = parseInt(value);
+const handleNumber = (value) => {  
+  const target = parseInt(value);  
   if (isNaN(target) || target < 0) {
     return false;
   }

@@ -1,9 +1,14 @@
-import { FormGroup, Input, InputGroup, Label, Col } from "reactstrap";
+import NumberFormat from "react-number-format";
+import { FormGroup, InputGroup, Label, Col } from "reactstrap";
 export default function Pace({ handleInput }) {
   return (
     <>
-      <FormGroup style={{ textAlign: "center" }}>
-        <Label tag="strong">Pace</Label>
+      <FormGroup
+        style={{
+          textAlign: "center",
+        }}
+      >
+        <Label tag="h4" style={{color:"#85C7F2",fontWeight: "bold", textShadow: "2px 2px #028090"}}>Pace</Label>
         <InputGroup
           style={{
             margin: "5px",
@@ -18,13 +23,17 @@ export default function Pace({ handleInput }) {
               padding: "3px",
             }}
           >
-            <Input
-              className="pace"
+            <NumberFormat
+              className="pace form-control input-number"
               name="minutes"
               placeholder="minutos"
-              type="number"
+              type="text"
               onChange={handleInput}
-              min={0}
+              min={0}                            
+              type="text"            
+              displayType="input"
+              suffix="'"           
+              mask="##"         
             />
           </Col>
           <Col
@@ -33,14 +42,17 @@ export default function Pace({ handleInput }) {
               padding: "3px",
             }}
           >
-            <Input
-              className="pace"
+            <NumberFormat
+              className="pace form-control input-number"
               name="seconds"
               placeholder="segundos"
-              type="number"
+              type="text"
               onChange={handleInput}
               min={0}
-              max={59}
+              max={59}               
+              displayType="input"
+              suffix="''"           
+              mask="##"    
             />
           </Col>
           <Col
@@ -49,14 +61,17 @@ export default function Pace({ handleInput }) {
               padding: "3px",
             }}
           >
-            <Input
-              className="pace"
+            <NumberFormat
+              className="pace form-control input-number"
               name="milliseconds"
               placeholder="millisegundos"
-              type="number"
+              type="text"
               onChange={handleInput}
               min={0}
-              max={999}
+              max={999}              
+              displayType="input"
+              suffix="'''"           
+              mask="###"  
             />
           </Col>
         </InputGroup>
