@@ -7,39 +7,31 @@ body {
   height: 100%;
   width: 100%;
   margin: 0%;
-  background-color: orangered;
-  display: flex;
-  justify-content: center;
+  background-color: #85C7F2;
+  display: flex;  
   align-items: center;
-  background-image: url("../public/images/20180623_074452.jpg");
+  justify-content: center;
+  background-image: url("../public/images/sunset.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;  
 }
 
-/* .modal {
-  height: 100%;
-  width: 100%;
-  margin: 0%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+button {
+  margin: 10px;
+  width: 100px;
+  height: 40px;
+}
+.btn {
+  background-color: #788AA3     ;
+  color:white;
+  font-weight: bold;
+  
+} 
+.input-number {
+  text-align: right;
 }
 
-.fade {
-  height: 100%;
-  width: 100%;
-  margin: 0%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+footer{
+  margin:0%;
 }
-
-.show {
-  height: 100%;
-  width: 100%;
-  margin: 0%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
