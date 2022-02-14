@@ -8,6 +8,10 @@ export default function GlobalStyle() {
       }
       a {
         text-decoration: none;
+        color:#F3F3F3;        
+      }
+      a:hover{
+        color:#CDE6F5;                
       }
       html {
         height: 100%;
@@ -28,6 +32,7 @@ export default function GlobalStyle() {
         width: 100px;
         height: 40px;
       }
+
       svg {
         margin: 5px;
       }
@@ -48,11 +53,13 @@ export default function GlobalStyle() {
       }
 
       .btn {
-        background-color: #788aa3;
+        background-color: #759FBC;
         color: white;
-        font-weight: bold;
-                
-
+        font-weight: bold;       
+        margin: 5px;         
+      }
+      .btn:hover{
+        background-color:#8DA7BE;
       }
       .input-number {
         text-align: right;

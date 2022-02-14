@@ -16,10 +16,10 @@ export default function Header() {
           padding: "15px",
         }}
       >
-        <IconLink path="https://github.com/claudiokazuo/" icon={faGithub} />
+        <IconLink href="https://github.com/claudiokazuo/" icon={faGithub} />
 
         <IconLink
-          path="https://www.instagram.com/hira.clau/"
+          href="https://www.instagram.com/hira.clau/"
           icon={faInstagram}
         />
       </div>

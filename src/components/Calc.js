@@ -12,16 +12,15 @@ export default function Calc() {
           justifyContent: "center",
           alignItems: "center",
           padding: "50px",
-          
         }}
       >
         <Button name="calc">
-        <FontAwesomeIcon icon={faCalculator} />
-          </Button>
+          <FontAwesomeIcon icon={faCalculator} />
+        </Button>
         <Link href="/">
           <Button name="goback">
-          <FontAwesomeIcon icon={faRotateBack} />
-            </Button>
+            <FontAwesomeIcon icon={faRotateBack} />
+          </Button>
         </Link>
       </FormGroup>
     </>

@@ -12,13 +12,13 @@ export default function Home() {
       <Head>Calculadora de corrida</Head>
       <Container style={{ width: "150px" }}>
         <Row>
-          <ButtonLink path="/pace" icon={faPersonRunning}>
+          <ButtonLink href="/pace" icon={faPersonRunning}>
             Pace
           </ButtonLink>
-          <ButtonLink path="/time" icon={faClock}>
+          <ButtonLink href="/time" icon={faClock}>
             Tempo
           </ButtonLink>
-          <ButtonLink path="/distance" icon={faMapLocation}>
+          <ButtonLink href="/distance" icon={faMapLocation}>
             Distância
           </ButtonLink>
         </Row>
