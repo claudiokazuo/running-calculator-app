@@ -11,7 +11,7 @@ export default function Calc() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          padding: "5px",
+          padding: "50px",
           
         }}
       >

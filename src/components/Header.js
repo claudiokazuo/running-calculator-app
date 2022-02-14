@@ -1,7 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
-
-import Link from "next/link";
+import IconLink from "./IconLink";
 export default function Header() {
   return (
     <header style={{ position: "fixed", top: "0", width: "100%" }}>
@@ -18,12 +16,12 @@ export default function Header() {
           padding: "15px",
         }}
       >
-        <Link href="https://github.com/claudiokazuo/">
-          <FontAwesomeIcon icon={faGithub} />
-        </Link>
-        <Link href="https://www.instagram.com/hira.clau/">
-          <FontAwesomeIcon icon={faInstagram} />
-        </Link>
+        <IconLink path="https://github.com/claudiokazuo/" icon={faGithub} />
+
+        <IconLink
+          path="https://www.instagram.com/hira.clau/"
+          icon={faInstagram}
+        />
       </div>
     </header>
   );

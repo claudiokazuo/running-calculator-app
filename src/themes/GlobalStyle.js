@@ -17,7 +17,7 @@ export default function GlobalStyle() {
       body {
         height: 100%;
         width: 100%;
-        background-image: url("../images/sunset.jpg");
+        background-image: url("../images/background.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -51,6 +51,8 @@ export default function GlobalStyle() {
         background-color: #788aa3;
         color: white;
         font-weight: bold;
+                
+
       }
       .input-number {
         text-align: right;
@@ -62,7 +64,7 @@ export default function GlobalStyle() {
         justify-content: center;
         align-items: center;
         display: flex;
-        flex-direction: row;
+        flex-direction: strech;
       }
       @media screen and (max-width: 500px) {
         .my-group {
