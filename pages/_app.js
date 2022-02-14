@@ -1,7 +1,13 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "./_app.css";
 import { useEffect } from "react";
-import { CardFooter } from "reactstrap";
+import Footer from "../src/components/Footer";
+import Header from "../src/components/Header";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+
+library.add(fab, faCoffee);
 
 export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -9,13 +15,9 @@ export default function MyApp({ Component, pageProps }) {
   }, []);
   return (
     <>
+      <Header/>
       <Component {...pageProps}></Component>
-      <footer style={{width: "100%", marginTop: "auto", marginBottom: "auto"}}>
-        <div className="text-center p-3" style= {{ backgroundColor : "black"}}>        
-       &copy; {new Date().getFullYear()} Claudio Hirakawa
-        </div>
-        </footer>  
+      <Footer />
     </>
-          
   );
 }
