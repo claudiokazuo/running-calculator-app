@@ -12,6 +12,7 @@ export default function Distance({ handleInput }) {
             name="distance"
             placeholder="km"
             mask="###"
+            suffix=" km"
           />
         </InputGroup>
       </Group>

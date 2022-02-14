@@ -12,18 +12,21 @@ export default function Time({ handleInput }) {
             name="hours"
             placeholder="horas"
             mask="##"
+            suffix=" h"
           />
           <Input
             handleInput={handleInput}
             name="minutes"
             placeholder="minutos"
             mask="##"
+            suffix=" m"
           />
           <Input
             handleInput={handleInput}
             name="seconds"
             placeholder="segundos"
             mask="##"
+            suffix=" s"
           />
         </InputGroup>
       </Group>

@@ -12,18 +12,21 @@ export default function Pace({ handleInput }) {
             name="minutes"
             placeholder="minutos"
             mask="##"
+            suffix="'"
           />
           <Input
             handleInput={handleInput}
             name="seconds"
             placeholder="segundos"
             mask="##"
+            suffix="''"
           />
           <Input
             handleInput={handleInput}
             name="milliseconds"
             placeholder="millisegundos"
             mask="###"
+            suffix="'''"
           />
         </InputGroup>
       </Group>
