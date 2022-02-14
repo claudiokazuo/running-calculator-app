@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from "../../components/Head";
 import Modal from "../../components/Modal";
 import { CalculateDistance } from "../../api/mock";
 import { Container } from "reactstrap";
@@ -8,6 +8,7 @@ import Time from "../../components/Time";
 import Pace from "../../components/Pace";
 import Calc from "../../components/Calc";
 import Box from "../../components/Box";
+import { faMapLocation } from "@fortawesome/free-solid-svg-icons";
 
 export default function Main() {
   const [modal, setModal] = useState({ open: false, header: "", message: "" });
@@ -65,7 +66,7 @@ export default function Main() {
 
   return (
     <>
-      <Head><title>Distância</title></Head>
+      <Head>Distância</Head>
       <Container>
         <Modal
           open={modal.open}
@@ -73,7 +74,7 @@ export default function Main() {
           header={modal.header}
           message={modal.message}
         />
-        <Box handleSubmit={handleSubmit} title="Distância">
+        <Box handleSubmit={handleSubmit} title="Distância" icon={faMapLocation}>
           <Time handleInput={handleInput} />
           <Pace handleInput={handleInput} />
           <Calc />

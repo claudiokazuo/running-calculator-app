@@ -8,7 +8,7 @@ export default function MyModal({ open, header, message, handleToogle }) {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor:"#92B6B1", 
+            backgroundColor:"#57C4E5", 
             color: "white"           
             
           }}
@@ -18,7 +18,8 @@ export default function MyModal({ open, header, message, handleToogle }) {
         <ModalBody 
           style={{
             textAlign: "center",
-            backgroundColor: "#92B6B1",
+            backgroundColor: "#57C4E5",
+            color:"white"
           }}
         >
           {message}

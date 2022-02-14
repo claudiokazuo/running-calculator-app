@@ -1,7 +1,8 @@
 import "bootstrap/dist/css/bootstrap.css";
-import "./_app.css";
 import { useEffect } from "react";
-import { CardFooter } from "reactstrap";
+import Footer from "../src/components/Footer";
+import Header from "../src/components/Header";
+import GlobalStyle from "../src/themes/GlobalStyle";
 
 export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -9,8 +10,10 @@ export default function MyApp({ Component, pageProps }) {
   }, []);
   return (
     <>
+      <GlobalStyle />
+      <Header />       
       <Component {...pageProps}></Component>
+      <Footer />
     </>
-          
   );
 }

@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalculator, faRotateBack } from "@fortawesome/free-solid-svg-icons";
 import { FormGroup, Button } from "reactstrap";
 import Link from "next/link";
 export default function Calc() {
@@ -9,13 +11,16 @@ export default function Calc() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          padding: "5px",
-          
+          padding: "50px",
         }}
       >
-        <Button name="calc">Calcular</Button>
+        <Button name="calc">
+          <FontAwesomeIcon icon={faCalculator} />
+        </Button>
         <Link href="/">
-          <Button name="goback">Voltar</Button>
+          <Button name="goback">
+            <FontAwesomeIcon icon={faRotateBack} />
+          </Button>
         </Link>
       </FormGroup>
     </>

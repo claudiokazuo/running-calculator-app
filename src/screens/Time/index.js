@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from "../../components/Head";
 import Modal from "../../components/Modal";
 import { CalculateTime } from "../../api/mock";
 import { Container } from "reactstrap";
@@ -9,7 +9,7 @@ import Pace from "../../components/Pace";
 import Calc from "../../components/Calc";
 import Distance from "../../components/Distance";
 import Box from "../../components/Box";
-
+import { faClock} from "@fortawesome/free-solid-svg-icons";
 export default function Main() {
   const [modal, setModal] = useState({ open: false, header: "", message: "" });
 
@@ -71,7 +71,7 @@ export default function Main() {
   return (
     <>
       <Head>
-        <title>Tempo</title>
+        Tempo
       </Head>
       <Container>
         <Modal
@@ -80,7 +80,7 @@ export default function Main() {
           header={modal.header}
           message={modal.message}
         />
-        <Box title="Tempo" handleSubmit={handleSubmit}>
+        <Box title="Tempo" handleSubmit={handleSubmit} icon={faClock}>
           <Distance handleInput={handleInput} />
           <Pace handleInput={handleInput} />
           <Calc />
