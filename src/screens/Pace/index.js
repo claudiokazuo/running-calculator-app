@@ -81,19 +81,19 @@ export default function Main() {
 
   return (
     <>
-      <Head>      
-        Pace</Head>
+      <Head>Pace</Head>
       <Container>
         <Modal
           open={modal.open}
           handleToogle={handleToogle}
           header={modal.header}
           message={modal.message}
+          icon={faPersonRunning}
         />
         <Box handleSubmit={handleSubmit} title="Pace" icon={faPersonRunning}>
           <Distance handleInput={handleInput} />
           <Time handleInput={handleInput} />
-          <Calc />
+          <Calc message={"Calcular o pace"} goback={"voltar"} />
         </Box>
       </Container>
     </>

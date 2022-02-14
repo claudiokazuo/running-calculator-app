@@ -5,7 +5,7 @@ export default function Input({ name, placeholder, mask, handleInput, suffix }) 
     <>
       <Col sm={4} style={{ width: "130px", margin: "5px" }}>
         <NumberFormat
-          className="pace form-control input-number"
+          className="form-control input-number"
           name={name}
           placeholder={placeholder}
           type="text"
