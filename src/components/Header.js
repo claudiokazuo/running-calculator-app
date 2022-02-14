@@ -1,4 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
+
 import Link from "next/link";
 export default function Header() {
   return (
@@ -17,10 +19,10 @@ export default function Header() {
         }}
       >
         <Link href="https://github.com/claudiokazuo/">
-          <FontAwesomeIcon icon={["fab", "github"]} />
+          <FontAwesomeIcon icon={faGithub} />
         </Link>
         <Link href="https://www.instagram.com/hira.clau/">
-          <FontAwesomeIcon icon={["fab", "instagram"]} />
+          <FontAwesomeIcon icon={faInstagram} />
         </Link>
       </div>
     </header>
