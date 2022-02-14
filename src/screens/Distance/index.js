@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from "../../components/Head";
 import Modal from "../../components/Modal";
 import { CalculateDistance } from "../../api/mock";
 import { Container } from "reactstrap";
@@ -65,7 +65,7 @@ export default function Main() {
 
   return (
     <>
-      <Head><title>Distância</title></Head>
+      <Head>Distância</Head>
       <Container>
         <Modal
           open={modal.open}

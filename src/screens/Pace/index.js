@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from "../../components/Head";
 import Modal from "../../components/Modal";
 import { CalculatePace } from "../../api/mock";
 import { Container } from "reactstrap";
@@ -80,7 +80,7 @@ export default function Main() {
 
   return (
     <>
-    <Head><title>Pace</title></Head>
+      <Head>Pace</Head>
       <Container>
         <Modal
           open={modal.open}

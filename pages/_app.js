@@ -10,6 +10,11 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Component {...pageProps}></Component>
+      <footer style={{width: "100%", marginTop: "auto", marginBottom: "auto"}}>
+        <div className="text-center p-3" style= {{ backgroundColor : "black"}}>        
+       &copy; {new Date().getFullYear()} Claudio Hirakawa
+        </div>
+        </footer>  
     </>
           
   );

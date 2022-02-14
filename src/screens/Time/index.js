@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from "../../components/Head";
 import Modal from "../../components/Modal";
 import { CalculateTime } from "../../api/mock";
 import { Container } from "reactstrap";
@@ -71,7 +71,7 @@ export default function Main() {
   return (
     <>
       <Head>
-        <title>Tempo</title>
+        Tempo
       </Head>
       <Container>
         <Modal

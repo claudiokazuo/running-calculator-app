@@ -1,20 +1,23 @@
-html {
-  height: 100%;
-  width: 100%;
-  margin: 0%;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-body {
-  height: 100%;
+a {
+  text-decoration: none;
+}
+html {
+  height: 100%;  
   width: 100%;
-  margin: 0%;
-  background-color: #85C7F2;
-  display: flex;  
-  align-items: center;
-  justify-content: center;
+}
+
+body {    
+  height: 100%;  
+  width: 100%;
   background-image: url("../public/images/sunset.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;  
+  background-size: cover;
 }
 
 button {
@@ -22,16 +25,29 @@ button {
   width: 100px;
   height: 40px;
 }
-.btn {
-  background-color: #788AA3     ;
-  color:white;
-  font-weight: bold;
-  
-} 
-.input-number {
-  text-align: right;
+
+
+
+#__next {
+  height: 100%;
+}
+#__next {
+  display: flex;
+  flex-direction: column;
+}
+#__next > * {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;  
+  align-items:   stretch;
 }
 
-footer{
-  margin:0%;
+.btn {
+  background-color: #788aa3;
+  color: white;
+  font-weight: bold;
+}
+.input-number {
+  text-align: right;
 }

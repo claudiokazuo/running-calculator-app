@@ -1,12 +1,19 @@
 import Link from "next/link";
-import Head from "next/head";
-import { Button, Container, Card, CardBody, Row, Badge, CardHeader, CardFooter } from "reactstrap";
+import {
+  Button,
+  Container,
+  Card,
+  CardBody,
+  Row,
+  Badge,
+  CardHeader,
+  CardFooter,
+} from "reactstrap";
+import Head from "../../components/Head";
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Calculadora de corrida</title>
-      </Head>      
+      <Head>Calculadora de corrida</Head>
       <Container style={{ width: "200px" }}>
         <Row>
           <Link href="/pace">
@@ -19,8 +26,8 @@ export default function Home() {
             <Button>Distância</Button>
           </Link>
         </Row>        
-      </Container>
-
+      </Container>      
+    
     </>
   );
 }
