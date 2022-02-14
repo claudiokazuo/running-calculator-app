@@ -1,5 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Modal, ModalBody, ModalHeader } from "reactstrap";
-export default function MyModal({ open, header, message, handleToogle }) {
+export default function MyModal({ open, header, message, handleToogle, icon }) {
   return (
     <>
       <Modal isOpen={open} toggle={handleToogle}   centered>
@@ -13,6 +14,7 @@ export default function MyModal({ open, header, message, handleToogle }) {
             
           }}
         >
+          <FontAwesomeIcon icon={icon} />
           {header}
         </ModalHeader>
         <ModalBody 

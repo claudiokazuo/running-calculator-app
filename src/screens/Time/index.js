@@ -79,11 +79,12 @@ export default function Main() {
           handleToogle={handleToogle}
           header={modal.header}
           message={modal.message}
+          icon={faClock}
         />
         <Box title="Tempo" handleSubmit={handleSubmit} icon={faClock}>
           <Distance handleInput={handleInput} />
           <Pace handleInput={handleInput} />
-          <Calc />
+          <Calc message={"Calcular o tempo"} goback={"Voltar"} />
         </Box>
       </Container>
     </>

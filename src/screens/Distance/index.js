@@ -32,8 +32,7 @@ export default function Main() {
     let pace = {};
     let validated = true;
 
-    for (let i = 0; i < e.target.length; i++) {
-      console.log("class");
+    for (let i = 0; i < e.target.length; i++) {      
       if (e.target[i].type === "text") {
         if (!inputHandler[e.target[i].name](e.target[i].value)) {
           setModal({
@@ -44,7 +43,7 @@ export default function Main() {
           validated = false;
           break;
         } else {
-          if (e.target[i].classList[0] === "time") {
+          if (i < 3) {
             time = { ...time, [e.target[i].name]: parseInt(e.target[i].value) };
           } else {
             pace = { ...pace, [e.target[i].name]: parseInt(e.target[i].value) };
@@ -52,7 +51,6 @@ export default function Main() {
         }
       }
     }
-
     if (validated) {
       const { distance } = CalculateDistance({ pace, time });
       setModal({
@@ -73,11 +71,12 @@ export default function Main() {
           handleToogle={handleToogle}
           header={modal.header}
           message={modal.message}
+          icon={faMapLocation}
         />
         <Box handleSubmit={handleSubmit} title="Distância" icon={faMapLocation}>
           <Time handleInput={handleInput} />
           <Pace handleInput={handleInput} />
-          <Calc />
+          <Calc message={"Calcular a distância"} goback={"Voltar"} />
         </Box>
       </Container>
     </>
